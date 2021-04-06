@@ -9,6 +9,9 @@
     <RepositoryUrl>https://github.com/zembord/System.Enumerable.Extensions</RepositoryUrl>
     <PackageId>Zembord.Enumerable.Extensions</PackageId>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <AssemblyVersion>1.0.0.1</AssemblyVersion>
+    <Version>1.0.0.1</Version>
+    <FileVersion>1.0.0.1</FileVersion>
   </PropertyGroup>
 
 </Project>
