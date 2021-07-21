@@ -14,5 +14,22 @@ namespace System.Enumerable.Extensions {
         /// Allow call: <code>Api(EnumerableExtensions.Enumerate(1,2,3));</code>
         /// </remarks>
         public static IEnumerable<T> Enumerate<T>(params T[] parameters) => parameters;
+
+        /// <summary>
+        /// Transform <typeparamref name="TSource"/> to <typeparamref name="TResult"/> using index
+        /// </summary>
+        /// <typeparam name="TSource">Source type</typeparam>
+        /// <typeparam name="TResult">Result type</typeparam>
+        /// <param name="source">Source</param>
+        /// <param name="result">Result factory</param>
+        /// <param name="filter">Filter on source expressions</param>
+        /// <returns>Result</returns>
+        public static IEnumerable<TResult> Select<TSource, TResult>(this IReadOnlyList<TSource> source, Func<TSource, int, TResult> result, Func<TSource, int, bool> filter = null) {
+            for (var i=0; i<source.Count; i++) {
+                var s = source[i];
+                var fr = filter == null ? true : filter(s,i);
+                if (fr) yield return result(s, i);
+            } 
+        }
     }
 }
