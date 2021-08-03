@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Zedward.Enumerable.Extensions {
+namespace Enumerable.Extensions {
     public static class EnumerableExtensions {
         /// <summary>
         /// Allow use methods with IEmunerable arguments as params T[] 

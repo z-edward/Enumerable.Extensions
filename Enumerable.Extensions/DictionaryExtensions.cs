@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Zedward.Enumerable.Extensions {
+namespace Enumerable.Extensions {
     /// <summary>
     /// Dictionary extensions methods
     /// </summary>

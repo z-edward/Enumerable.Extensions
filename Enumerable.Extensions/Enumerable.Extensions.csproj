@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>zembord</Authors>
+    <Description>Simple dictionary &amp; enumerable extensions methods</Description>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageProjectUrl>https://github.com/zembord/Enumerable.Extensions</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/zembord/Enumerable.Extensions</RepositoryUrl>
+    <PackageId>Zedward.Enumerable.Extensions</PackageId>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <AssemblyVersion>1.0.0.2</AssemblyVersion>
+    <Version>1.0.0.2</Version>
+    <FileVersion>1.0.0.2</FileVersion>
+    <LangVersion>Latest</LangVersion>
+  </PropertyGroup>
+
+</Project>
