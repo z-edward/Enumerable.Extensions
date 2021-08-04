@@ -18,8 +18,7 @@ jobs:
       run: dotnet restore
     - name: Build
       run: dotnet build --no-restore
-     -name: Store build results
-	uses: actions/upload-artifact@v2
+    - uses: actions/upload-artifact@v2
 	with: 
 	name:	nuget-package
 	path: /home/runner/work/Enumerable.Extensions/Enumerable.Extensions/Enumerable.Extensions/bin/**/*.nupkg
