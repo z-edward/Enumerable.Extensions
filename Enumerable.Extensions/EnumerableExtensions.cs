@@ -50,5 +50,23 @@ namespace Enumerable.Extensions {
             }
             return se.MoveNext() ? InternalChain(se.Current) : default;
         }
+
+
+        /// <summary>
+        /// Fast transform enumerable to array known size
+        /// </summary>
+        /// <typeparam name="T">Type of element</typeparam>
+        /// <param name="source">Source enumerable</param>
+        /// <param name="count">size of target array</param>
+        /// <returns>Array of elements</returns>
+        /// <remarks>If array size greater than number elements in enumerable, elements will emptys</remarks>
+        public static T[] ToArray<T>(this IEnumerable<T> source, int count) {
+            var result = new T[count];
+            using var enumerator = source.GetEnumerator();
+            for (var i=0;i < count; i++) 
+                if (enumerator.MoveNext()) result[i] = enumerator.Current;
+                else break;
+            return result;
+        }
     }
 }
