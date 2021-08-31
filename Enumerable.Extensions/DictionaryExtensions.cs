@@ -30,8 +30,7 @@ namespace Enumerable.Extensions {
         /// <param name="add">Value factory</param>
         /// <returns>Value</returns>
         public static T GetOrdAdd<TKey, T>(this IDictionary<TKey, T> @this, TKey key, Func<TKey, T> add) {
-            T factory() { T v = add(key); @this.Add(key, v ); return v; }
-            return @this.ContainsKey(key) ? @this[key] : factory();
+            return @this.GetOrdAdd(key, add(key));
         }
         
         /// <summary>
@@ -44,7 +43,7 @@ namespace Enumerable.Extensions {
         /// <param name="add">Value factory</param>
         /// <returns>Value</returns>
         public static T GetOrdAdd<TKey, T>(this IDictionary<TKey, T> @this, TKey key, Func<T> add) {
-           return @this.GetOrdAdd(key, k => add());
+           return @this.GetOrdAdd(key, add());
         }
 
         /// <summary>
@@ -57,7 +56,11 @@ namespace Enumerable.Extensions {
         /// <param name="value">Value</param>
         /// <returns>Value</returns>
         public static T GetOrdAdd<TKey, T>(this IDictionary<TKey, T> @this, TKey key, T value) { 
-            return @this.GetOrdAdd(key, k => value);
+            T Add() { 
+                @this.Add(key,value);
+                return value;
+            }
+            return @this.ContainsKey(key) ? @this[key] : Add();
         }
         
         

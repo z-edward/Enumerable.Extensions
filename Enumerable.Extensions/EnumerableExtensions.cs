@@ -20,7 +20,7 @@ namespace Enumerable.Extensions {
         /// <summary>
         /// Build chain result by handling secuance of enumerable
         /// </summary>
-        /// <typeparam name="TSource">Source type</typeparam>
+        /// <typeparam name="TSource">Source type</typeparam>           
         /// <typeparam name="TResult">Result type</typeparam>
         /// <param name="source">Source enumerable</param>
         /// <param name="selectorNext">Function to build result for intermediate values</param>
