@@ -5,7 +5,7 @@
     <Authors>z-edward</Authors>
     <Description>Simple dictionary &amp; enumerable extensions methods</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageProjectUrl>https://github.com/zembord/EnumerableExtensions</PackageProjectUrl>
+    <PackageProjectUrl>https://github.com/z-edward/EnumerableExtensions</PackageProjectUrl>
     <RepositoryUrl>https://github.com/z-edward/EnumerableExtensions.git</RepositoryUrl>
     <PackageId>z-edward.EnumerableExtensions</PackageId>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
