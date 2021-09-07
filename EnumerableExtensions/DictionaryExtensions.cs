@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Enumerable.Extensions {
+namespace EnumerablesExtensions {
     /// <summary>
     /// Dictionary extensions methods
     /// </summary>

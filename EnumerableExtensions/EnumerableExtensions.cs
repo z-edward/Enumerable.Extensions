@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Enumerable.Extensions {
+namespace EnumerablesExtensions {
     public static class EnumerableExtensions {
         /// <summary>
         /// Allow use methods with IEmunerable arguments as params T[] 
